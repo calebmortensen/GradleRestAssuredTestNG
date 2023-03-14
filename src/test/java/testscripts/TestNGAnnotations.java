@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class TestNGAnnotations {
 	public static WebDriver driver;
 	
 	@Parameters({ "Url", "Email", "Password"})
-	@Test
+	@Test(groups={"smoke"})
 	public void login(@Optional("http://tutorialsninja.com/demo/")String Url, String Email, String Password) {
 		WebDriverManager.chromedriver().setup();
 		
@@ -40,16 +41,11 @@ public class TestNGAnnotations {
 		
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		Assert.assertTrue(driver.findElement(By.linkText("Edit your account information")).isDisplayed());
-		
-		
-		/*
-		 * String actualTitle = driver.getTitle(); String expectedTitle = "Your Store";
-		 * System.out.println("Continue on...");
-		 */
+		System.out.println("Login completed");
 		
 	}
-	
-	@AfterMethod
+	//@Ignore
+	@AfterMethod(enabled=true, groups="smoke")
 	public void tearDown() {
 		System.out.println("AfterMethod tearDown");
 		driver.quit();

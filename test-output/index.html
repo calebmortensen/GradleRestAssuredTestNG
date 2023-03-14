@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\caleb\EWS\GradleRestAssuredTestNG\lib\testng.xml</span>
+                    <span>C:\Users\caleb\EWS\GradleRestAssuredTestNG\lib\Groups.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.TestAPI" class="method navigator-link" hash-for-method="getSingleUser">getSingleUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.TestAPI" class="method navigator-link" hash-for-method="getUsersInPageTwo">getUsersInPageTwo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testscripts.TestNGAnnotations" class="method navigator-link" hash-for-method="login(http://tutorialsninja.com/demo/, amotooricap9@gmail.com, 12345)">login(http://tutorialsninja.com/demo/, amotooricap9@gmail.com, 12345)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.ClassA" class="method navigator-link" hash-for-method="methodAOne">methodAOne</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.ClassA" class="method navigator-link" hash-for-method="methodATwo">methodATwo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,6 +141,30 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">testscripts.ClassA</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="methodAOne">
+                  </a> <!-- methodAOne -->
+                  <span class="method-name">methodAOne</span>
+                  <em>
+(ClassA)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="methodATwo">
+                  </a> <!-- methodATwo -->
+                  <span class="method-name">methodATwo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testscripts.TestNGAnnotations</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -134,10 +178,32 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testscripts.TestAPI</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getSingleUser">
+                  </a> <!-- getSingleUser -->
+                  <span class="method-name">getSingleUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getUsersInPageTwo">
+                  </a> <!-- getUsersInPageTwo -->
+                  <span class="method-name">getUsersInPageTwo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\caleb\EWS\GradleRestAssuredTestNG\lib\testng.xml</span>
+            <span class="header-content">C:\Users\caleb\EWS\GradleRestAssuredTestNG\lib\Groups.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -148,8 +214,17 @@
   &lt;parameter name=&quot;Url&quot; value=&quot;http://tutorialsninja.com/demo/&quot;/&gt;
   &lt;parameter name=&quot;Password&quot; value=&quot;12345&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;Sanity&quot;/&gt;
+        &lt;include name=&quot;smoke&quot;/&gt;
+        &lt;include name=&quot;windows.regression&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;testscripts.ClassA&quot;/&gt;
       &lt;class name=&quot;testscripts.TestNGAnnotations&quot;/&gt;
+      &lt;class name=&quot;testscripts.TestAPI&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -163,7 +238,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,6 +248,38 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">methodAOne</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">methodATwo</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">login</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">windows.regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">getSingleUser</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">getUsersInPageTwo</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -189,16 +296,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'testscripts.TestNGAnnotations')
-data.setCell(0, 3, 9155);
+data.setCell(0, 3, 7941);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'getUsersInPageTwo')
+data.setCell(1, 2, 'testscripts.TestAPI')
+data.setCell(1, 3, 1959);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'getSingleUser')
+data.setCell(2, 2, 'testscripts.TestAPI')
+data.setCell(2, 3, 124);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'methodAOne')
+data.setCell(3, 2, 'testscripts.ClassA')
+data.setCell(3, 3, 11);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'methodATwo')
+data.setCell(4, 2, 'testscripts.ClassA')
+data.setCell(4, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -213,9 +336,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testscripts.ClassA</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">methodAThree</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -224,15 +354,37 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">testscripts.ClassA</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">methodAOne</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">methodATwo</span>
+                <span class="method-start">20 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">testscripts.TestNGAnnotations</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login(http://tutorialsninja.com/demo/, amotooricap9@gmail.com, 12345)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">33 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">9162 ms</span>
+                <span class="method-start">7976 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testscripts.TestAPI</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">getUsersInPageTwo</span>
+                <span class="method-start">8174 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getSingleUser</span>
+                <span class="method-start">10137 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
