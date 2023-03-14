@@ -45,7 +45,7 @@ public class TestNGAnnotations {
 		
 	}
 	//@Ignore
-	@AfterMethod(enabled=true, groups="smoke")
+	@AfterMethod(enabled=true, dependsOnMethods= {"login"},groups="smoke")
 	public void tearDown() {
 		System.out.println("AfterMethod tearDown");
 		driver.quit();
