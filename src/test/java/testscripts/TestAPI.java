@@ -19,7 +19,7 @@ public class TestAPI {
 		System.out.println("GetUsersInPageTwo");
 	}
 	
-	@Test (priority=2, groups={"windows.regression"})
+	@Test (priority=2,groups={"windows.regression"})
 	public void getSingleUser() {
 		
 		Response response = given().when().get("https://reqres.in/api/users?page=2");

@@ -7,14 +7,22 @@
 <parameter name="Email" value="amotooricap9@gmail.com"/>
 <parameter name="Password" value="12345"/>
   <test thread-count="5" name="Test">
-    <groups>
-    <run>
+     
+    <groups>   
+    <dependencies>
+    <group name = "Sanity" depends-on="smoke"/>
+    <group name = "smoke" depends-on="windows.regression"/>
+    </dependencies>
+    </groups> 
     
+    
+    <!-- <groups>
+    <run>
     <include name = "Sanity"/>
     <include name = "smoke" />
     <include name = "windows.regression" />
     </run>
-    </groups>
+    </groups> -->
     <classes>
       <class name ="testscripts.ClassA"/>
       <class name ="testscripts.TestNGAnnotations"/>

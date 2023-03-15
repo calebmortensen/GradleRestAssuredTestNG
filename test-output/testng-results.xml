@@ -1,56 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-14T12:34:36 PDT" name="Suite" finished-at="2023-03-14T12:34:46 PDT" duration-ms="10325">
+  <suite started-at="2023-03-15T10:23:11 PDT" name="Default suite" finished-at="2023-03-15T10:23:30 PDT" duration-ms="19633">
     <groups>
-      <group name="windows.regression">
-        <method signature="TestAPI.getUsersInPageTwo()[pri:1, instance:testscripts.TestAPI@15043a2f]" name="getUsersInPageTwo" class="testscripts.TestAPI"/>
-        <method signature="TestAPI.getSingleUser()[pri:2, instance:testscripts.TestAPI@15043a2f]" name="getSingleUser" class="testscripts.TestAPI"/>
-      </group> <!-- windows.regression -->
-      <group name="Sanity">
-        <method signature="ClassA.methodAOne()[pri:1, instance:testscripts.ClassA@2a7f1f10]" name="methodAOne" class="testscripts.ClassA"/>
-        <method signature="ClassA.methodATwo()[pri:2, instance:testscripts.ClassA@2a7f1f10]" name="methodATwo" class="testscripts.ClassA"/>
-      </group> <!-- Sanity -->
-      <group name="smoke">
-        <method signature="TestNGAnnotations.login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testscripts.TestNGAnnotations@8f2ef19]" name="login" class="testscripts.TestNGAnnotations"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-03-14T12:34:36 PDT" name="Test" finished-at="2023-03-14T12:34:46 PDT" duration-ms="10325">
-      <class name="testscripts.ClassA">
-        <test-method signature="methodAOne()[pri:1, instance:testscripts.ClassA@2a7f1f10]" started-at="2023-03-14T12:34:36 PDT" name="methodAOne" description="ClassA" finished-at="2023-03-14T12:34:36 PDT" duration-ms="11" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodAOne -->
-        <test-method signature="methodATwo()[pri:2, instance:testscripts.ClassA@2a7f1f10]" started-at="2023-03-14T12:34:36 PDT" name="methodATwo" finished-at="2023-03-14T12:34:36 PDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodATwo -->
-      </class> <!-- testscripts.ClassA -->
-      <class name="testscripts.TestAPI">
-        <test-method signature="getUsersInPageTwo()[pri:1, instance:testscripts.TestAPI@15043a2f]" started-at="2023-03-14T12:34:44 PDT" name="getUsersInPageTwo" finished-at="2023-03-14T12:34:46 PDT" duration-ms="1959" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getUsersInPageTwo -->
-        <test-method signature="getSingleUser()[pri:2, instance:testscripts.TestAPI@15043a2f]" started-at="2023-03-14T12:34:46 PDT" name="getSingleUser" finished-at="2023-03-14T12:34:46 PDT" duration-ms="124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getSingleUser -->
-      </class> <!-- testscripts.TestAPI -->
-      <class name="testscripts.TestNGAnnotations">
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testscripts.TestNGAnnotations@8f2ef19]" started-at="2023-03-14T12:34:36 PDT" name="login" finished-at="2023-03-14T12:34:44 PDT" duration-ms="7941" status="PASS">
+    <test started-at="2023-03-15T10:23:11 PDT" name="Default test" finished-at="2023-03-15T10:23:30 PDT" duration-ms="19633">
+      <class name="tests.DDTDemo">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.DDTDemo@750e2b97]" started-at="2023-03-15T10:23:11 PDT" name="verifyLogin" data-provider="dataSupplier" finished-at="2023-03-15T10:23:18 PDT" duration-ms="7798" status="PASS">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[http://tutorialsninja.com/demo/]]>
-              </value>
-            </param>
-            <param index="1">
               <value>
                 <![CDATA[amotooricap9@gmail.com]]>
               </value>
             </param>
-            <param index="2">
+            <param index="1">
               <value>
                 <![CDATA[12345]]>
               </value>
@@ -58,12 +22,110 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testscripts.TestNGAnnotations@8f2ef19]" started-at="2023-03-14T12:34:44 PDT" name="tearDown" finished-at="2023-03-14T12:34:44 PDT" duration-ms="196" status="PASS">
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.DDTDemo@750e2b97]" started-at="2023-03-15T10:23:18 PDT" name="verifyLogin" data-provider="dataSupplier" finished-at="2023-03-15T10:23:24 PDT" duration-ms="5947" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[amotooricap3@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testscripts.TestNGAnnotations -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- verifyLogin -->
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.DDTDemo@750e2b97]" started-at="2023-03-15T10:23:24 PDT" name="verifyLogin" data-provider="dataSupplier" finished-at="2023-03-15T10:23:30 PDT" duration-ms="5814" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[amotooricap6@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Edit your account information"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b6c7cb0320f1131ba34dffc406592c8d, findElement {using=link text, value=Edit your account information}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\caleb\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56045}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56045/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6c7cb0320f1131ba34dffc406592c8d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Edit your account information"}
+  (Session info: chrome=111.0.5563.65)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b6c7cb0320f1131ba34dffc406592c8d, findElement {using=link text, value=Edit your account information}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\caleb\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56045}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56045/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6c7cb0320f1131ba34dffc406592c8d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at tests.DDTDemo.verifyLogin(DDTDemo.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- tests.DDTDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

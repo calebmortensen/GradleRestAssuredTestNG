@@ -19,7 +19,7 @@ public class TestNGAnnotations {
 	public static WebDriver driver;
 	
 	@Parameters({ "Url", "Email", "Password"})
-	@Test(groups={"smoke"})
+	@Test(groups={"smoke"}, alwaysRun=true)
 	public void login(@Optional("http://tutorialsninja.com/demo/")String Url, String Email, String Password) {
 		WebDriverManager.chromedriver().setup();
 		
@@ -45,7 +45,7 @@ public class TestNGAnnotations {
 		
 	}
 	//@Ignore
-	@AfterMethod(enabled=true, dependsOnMethods= {"login"},groups="smoke")
+	@AfterMethod(enabled=true, groups="smoke")
 	public void tearDown() {
 		System.out.println("AfterMethod tearDown");
 		driver.quit();
