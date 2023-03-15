@@ -17,7 +17,7 @@ public class JaggedDemo {
 		System.out.println("----------");
 	}
 	
-	@DataProvider(name="supplier")
+	@DataProvider(name="supplier", indices= {0,2}) //indices attribute
 	public Object[][] dataSupplier() {
 		//JAGGED 2 Dimensional array with different value counts
 		Object[][] data = {
