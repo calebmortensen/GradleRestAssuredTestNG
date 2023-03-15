@@ -12,8 +12,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DDTDemo {
 	public static WebDriver driver;
-	@Test(dataProvider="dataSupplier")
-	public void verifyLogin(String email, String password) {
+	@Test(dataProvider="getTestData", dataProviderClass=SampleProvider.class)
+	public void verifyLogin(String [] str) {  //String email, String password
          WebDriverManager.chromedriver().setup();		
 		//Code for Chrome Security Issue
 		ChromeOptions options = new ChromeOptions();
@@ -24,22 +24,21 @@ public class DDTDemo {
 		driver.get("http://tutorialsninja.com/demo/");
 		driver.findElement(By.xpath("//span[text()='My Account']")).click();
 		driver.findElement(By.linkText("Login")).click();
-		driver.findElement(By.id("input-email")).sendKeys(email);
-		driver.findElement(By.id("input-password")).sendKeys(password);
+		driver.findElement(By.id("input-email")).sendKeys(str[0]);      //email
+		driver.findElement(By.id("input-password")).sendKeys(str[1]);   //password
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		Assert.assertTrue(driver.findElement(By.linkText("Edit your account information")).isDisplayed());
 		driver.quit();
 	}
-	@DataProvider
-	public String[][] dataSupplier() {
-		
-		String[][] data = 
-			{{"amotooricap9@gmail.com","12345"},
-			{"amotooricap3@gmail.com","12345"},
-			{"amotooricap7@gmail.com","12345"}};
-		
-		return data;
-		
-	}
+	/*
+	 * @DataProvider(name="getTestData") public String[][] dataSupplier() {
+	 * 
+	 * String[][] data = {{"amotooricap9@gmail.com","12345"},
+	 * {"amotooricap3@gmail.com","12345"}, {"amotooricap7@gmail.com","12345"}};
+	 * 
+	 * return data;
+	 * 
+	 * }
+	 */
 
 }
