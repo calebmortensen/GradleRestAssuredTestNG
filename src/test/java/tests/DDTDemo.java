@@ -5,14 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DDTDemo {
-	public static WebDriver driver;
-	@Test(dataProvider="getTestData", dataProviderClass=SampleProvider.class)
+	public static WebDriver driver;                             //expectedException=NoSuchElementException.class
+	@Test(dataProvider="getTestData", dataProviderClass=SampleProvider.class) //, timeOut=8000
 	public void verifyLogin(String [] str) {  //String email, String password
          WebDriverManager.chromedriver().setup();		
 		//Code for Chrome Security Issue
@@ -28,8 +29,15 @@ public class DDTDemo {
 		driver.findElement(By.id("input-password")).sendKeys(str[1]);   //password
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		Assert.assertTrue(driver.findElement(By.linkText("Edit your account information")).isDisplayed());
-		driver.quit();
+		
 	}
+		@AfterMethod
+		public void tearDown() {
+			
+			driver.quit();
+		}
+	
+	
 	/*
 	 * @DataProvider(name="getTestData") public String[][] dataSupplier() {
 	 * 

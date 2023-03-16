@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 
 public class SampleProvider {
 	
-	@DataProvider(name="getTestData")
+	@DataProvider(name="getTestData")  //, parallel=true
 	public String[][] dataSupplier() {
 		
 		String[][] data = 
