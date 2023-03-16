@@ -1,69 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-16T10:33:55 PDT" name="Suite" finished-at="2023-03-16T10:33:56 PDT" duration-ms="258">
+  <suite started-at="2023-03-16T11:46:13 PDT" name="Default suite" finished-at="2023-03-16T11:46:13 PDT" duration-ms="92">
     <groups>
     </groups>
-    <test started-at="2023-03-16T10:33:55 PDT" name="LoginTest" finished-at="2023-03-16T10:33:55 PDT" duration-ms="129">
+    <test started-at="2023-03-16T11:46:13 PDT" name="Default test" finished-at="2023-03-16T11:46:13 PDT" duration-ms="92">
       <class name="parallelThreads.Login">
-        <test-method signature="loginWithValidCredentials()[pri:1, instance:parallelThreads.Login@1a75e76a]" started-at="2023-03-16T10:33:55 PDT" name="loginWithValidCredentials" finished-at="2023-03-16T10:33:55 PDT" duration-ms="17" status="PASS">
+        <test-method signature="loginWithValidCredentials()[pri:1, instance:parallelThreads.Login@1a942c18]" started-at="2023-03-16T11:46:13 PDT" name="loginWithValidCredentials" finished-at="2023-03-16T11:46:13 PDT" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredentials -->
-        <test-method signature="loginWithValidEmailAndInvalidPassword()[pri:2, instance:parallelThreads.Login@1a75e76a]" started-at="2023-03-16T10:33:55 PDT" name="loginWithValidEmailAndInvalidPassword" finished-at="2023-03-16T10:33:55 PDT" duration-ms="2" status="PASS">
+        <test-method signature="loginWithValidEmailAndInvalidPassword()[pri:2, instance:parallelThreads.Login@1a942c18]" started-at="2023-03-16T11:46:13 PDT" name="loginWithValidEmailAndInvalidPassword" finished-at="2023-03-16T11:46:13 PDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidEmailAndInvalidPassword -->
-        <test-method signature="loginWithValidEmailAndValidPassword()[pri:3, instance:parallelThreads.Login@1a75e76a]" started-at="2023-03-16T10:33:55 PDT" name="loginWithValidEmailAndValidPassword" finished-at="2023-03-16T10:33:55 PDT" duration-ms="1" status="PASS">
+        <test-method signature="loginWithValidEmailAndValidPassword()[pri:3, instance:parallelThreads.Login@1a942c18]" started-at="2023-03-16T11:46:13 PDT" name="loginWithValidEmailAndValidPassword" finished-at="2023-03-16T11:46:13 PDT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidEmailAndValidPassword -->
-        <test-method signature="loginWithInvalidCredentials()[pri:4, instance:parallelThreads.Login@1a75e76a]" started-at="2023-03-16T10:33:55 PDT" name="loginWithInvalidCredentials" finished-at="2023-03-16T10:33:55 PDT" duration-ms="2" status="PASS">
+        <test-method signature="loginWithInvalidCredentials()[pri:4, instance:parallelThreads.Login@1a942c18]" started-at="2023-03-16T11:46:13 PDT" name="loginWithInvalidCredentials" finished-at="2023-03-16T11:46:13 PDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidCredentials -->
-        <test-method signature="loginWithoutCredentials()[pri:5, instance:parallelThreads.Login@1a75e76a]" started-at="2023-03-16T10:33:55 PDT" name="loginWithoutCredentials" finished-at="2023-03-16T10:33:55 PDT" duration-ms="1" status="PASS">
+        <test-method signature="loginWithoutCredentials()[pri:5, instance:parallelThreads.Login@1a942c18]" started-at="2023-03-16T11:46:13 PDT" name="loginWithoutCredentials" finished-at="2023-03-16T11:46:13 PDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithoutCredentials -->
       </class> <!-- parallelThreads.Login -->
-    </test> <!-- LoginTest -->
-    <test started-at="2023-03-16T10:33:55 PDT" name="RegisterTest" finished-at="2023-03-16T10:33:55 PDT" duration-ms="110">
-      <class name="parallelThreads.Register">
-        <test-method signature="registerWithOnlyMandatoryFields()[pri:1, instance:parallelThreads.Register@20140db9]" started-at="2023-03-16T10:33:55 PDT" name="registerWithOnlyMandatoryFields" finished-at="2023-03-16T10:33:55 PDT" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerWithOnlyMandatoryFields -->
-        <test-method signature="registerWithAllFields()[pri:2, instance:parallelThreads.Register@20140db9]" started-at="2023-03-16T10:33:55 PDT" name="registerWithAllFields" finished-at="2023-03-16T10:33:55 PDT" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerWithAllFields -->
-        <test-method signature="registerWithoutProvidingAnyFields()[pri:3, instance:parallelThreads.Register@20140db9]" started-at="2023-03-16T10:33:55 PDT" name="registerWithoutProvidingAnyFields" finished-at="2023-03-16T10:33:55 PDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerWithoutProvidingAnyFields -->
-        <test-method signature="registerADuplicateAccount()[pri:4, instance:parallelThreads.Register@20140db9]" started-at="2023-03-16T10:33:55 PDT" name="registerADuplicateAccount" finished-at="2023-03-16T10:33:55 PDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerADuplicateAccount -->
-      </class> <!-- parallelThreads.Register -->
-    </test> <!-- RegisterTest -->
-    <test started-at="2023-03-16T10:33:56 PDT" name="SearchTest" finished-at="2023-03-16T10:33:56 PDT" duration-ms="19">
-      <class name="parallelThreads.Search">
-        <test-method signature="searchAValidProduct()[pri:1, instance:parallelThreads.Search@402c4085]" started-at="2023-03-16T10:33:56 PDT" name="searchAValidProduct" finished-at="2023-03-16T10:33:56 PDT" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchAValidProduct -->
-        <test-method signature="searchAnInValidProduct()[pri:2, instance:parallelThreads.Search@402c4085]" started-at="2023-03-16T10:33:56 PDT" name="searchAnInValidProduct" finished-at="2023-03-16T10:33:56 PDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchAnInValidProduct -->
-        <test-method signature="searchNoProduct()[pri:3, instance:parallelThreads.Search@402c4085]" started-at="2023-03-16T10:33:56 PDT" name="searchNoProduct" finished-at="2023-03-16T10:33:56 PDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchNoProduct -->
-      </class> <!-- parallelThreads.Search -->
-    </test> <!-- SearchTest -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
