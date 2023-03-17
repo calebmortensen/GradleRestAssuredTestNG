@@ -55,7 +55,7 @@ public class Login extends Base {
 	 * currentThread().getId()); }
 	 */
 
-	@Test(priority = 2, dependsOnMethods = { "loginWithValidCredentials" },retryAnalyzer=listeners.MyRetryAnalyzer.class)
+	@Test(priority = 2, dependsOnMethods = { "loginWithValidCredentials" })//,retryAnalyzer=listeners.MyRetryAnalyzer.class
 	public void loginWithInvalidCredentials() {
 		WebDriverManager.chromedriver().setup();
 		// Code for Chrome Security Issue
