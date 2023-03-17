@@ -1,15 +1,26 @@
 package listeners;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
 
-public class MyListeners implements ITestListener{
+import base.Base;
+
+public class MyListeners extends Base implements ITestListener{        //extends TestListenerAdapter
+	public WebDriver driver;
 	
 	@Override
 	public void onTestStart(ITestResult result) {
 	   
-		String testName = result.getName();
+		String testName = result.getTestContext().getName()+"-"+result.getName(); //test tag & test name retrieved
 		System.out.println(testName+ " startedX");
 	  }
 
@@ -21,8 +32,14 @@ public class MyListeners implements ITestListener{
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		String testName = result.getName();
-		System.out.println(testName+ " failureX");
+		String testName = result.getTestContext().getName()+"-"+result.getName();
+		
+		System.out.println(testName+ " failedX");
+		
+		WebDriver driver = null;
+		
+		takeScreenShot(driver, testName);
+		
 	}
 
 	@Override

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="2"> 
-	<test name="RegisterTest"> <!-- parallel and thread-count can be run at classes, methods, none, false, etc -->
+<suite name="Suite"> <!--  parallel="tests" thread-count="2" -->
+	<!-- <listeners>
+		<listener class-name="listeners.MyListeners" />
+		
+		</listeners>  -->
+	
+	<!-- <test name="RegisterTest"> parallel and thread-count can be run at classes, methods, none, false, etc
+			
+		
 		<classes>
 			<class name="parallelThreads.Register" />
 			
 		</classes>
-	</test> 
+	</test>  -->
 	
 	<test name="LoginTest">
 		<classes>
@@ -16,10 +23,10 @@
 		</classes>
 	</test> 
 	
-	<test name="SearchTest">
+	<!-- <test name="SearchTest">
 		<classes>
 			
 			<class name="parallelThreads.Search" />
 		</classes>
-	</test> 
+	</test>  -->
 </suite> 
