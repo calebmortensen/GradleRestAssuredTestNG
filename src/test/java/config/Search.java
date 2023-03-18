@@ -40,6 +40,7 @@ public class Search extends LoadConfig{
 
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
+		
 		homePage.clickOnMyAccountDropMenu();
 		//driver.findElement(By.xpath("//span[text()='My Account']")).click();
 		homePage.selectLoginOption();
