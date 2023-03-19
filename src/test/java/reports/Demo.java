@@ -2,18 +2,26 @@ package reports;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class Demo {
+import io.github.bonigarcia.wdm.WebDriverManager;
 
+public class Demo extends screenshot.TakeSS{
+
+	//EXTENT REPORTS
 	public static void main(String[] args) throws IOException {
 		
 		ExtentReports extent = new ExtentReports();
@@ -70,10 +78,43 @@ public class Demo {
 		ExtentTest eTest7 = extent.createTest("TestSeven");
 		eTest7.log(Status.INFO, MarkupHelper.createOrderedList(hmap1)); //hashmap outputs in ANY order
 		
+		ExtentTest eTest8 = extent.createTest("TestEight");
+		
+		try {
+			int a = 9/0;
+		}catch(Exception e) {
+			eTest8.fail(e);
+		}
+		
+		WebDriverManager.chromedriver().setup();		
+		//Code for Chrome Security Issue
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");	
+		//Add 'options' as argument
+		driver = new ChromeDriver(options);				
+		driver.manage().window().maximize();
+		driver.get("http://tutorialsninja.com/demo/");
+		
+		//Called from other package
+		String destinationScreenshotFilePath = takeScreenShot("TN_");
+		
+					
+		ExtentTest eTest9 = extent.createTest("TestNine");
+		
+		eTest9.log(Status.INFO, "TestNine execution started");
+		eTest9.addScreenCaptureFromPath(destinationScreenshotFilePath, "<b>Home Page File Title Bold</b>");
+		//eTest9.addScreenCaptureFromBase64String(destinationScreenshotFilePath, "<b>Home Page File Title Bold</b>");
+		eTest9.log(Status.INFO, "TestNine execution Completed");
+		//eTest9.log(Status.INFO, MediaEntityBuilder.createScreenCaptureFromBase64String(takeScreenShot("TNHP"), "TutorialsNinjaHP").build());			
+			
 		extent.flush();
+		driver.quit();
 		
 		Desktop.getDesktop().browse(file.toURI());
 		
+		
 	}
+	
+	
 
 }
